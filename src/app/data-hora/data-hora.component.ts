@@ -13,9 +13,22 @@ export class DataHoraComponent implements OnInit {
   // public NomeClasse() { ... - Java
   constructor() { 
     this.dataHora = new Date();
+    
+    // JavaScript 5
+    // setInterval(function() {
+    //   this.atualizarDataHora()
+    // }, 1000);   
+    
+    // JavaScript 6
+    setInterval(() => this.atualizarDataHora(), 1000);
   }
 
   ngOnInit(): void {
+  }
+
+  // public void atualizarDataHora() { ... - Java
+  atualizarDataHora(): void {
+    this.dataHora = new Date();
   }
 
 }
